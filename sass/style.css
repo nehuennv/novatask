@@ -1,0 +1,371 @@
+@font-face {
+  font-family: "Mi Fuente";
+  src: url("../assets/font/ITCAvantGardeStd-Demi.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/font/Poppins-Medium.ttf");
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  height: 100%;
+}
+
+.showSectionTask {
+  transform: translateX(0%) !important;
+}
+
+.checkOn {
+  width: 28% !important;
+}
+
+.showInputBox {
+  transform: translateY(5vh) !important;
+  height: 12% !important;
+}
+
+.createMargin {
+  margin-bottom: 8.5vh !important;
+}
+
+.newRadius {
+  border-radius: 16px 16px 0px 0px !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #1F2128;
+  height: 100vh;
+  overflow: hidden;
+}
+body .inputCreateTaskContainer {
+  display: flex;
+  background: #343740;
+  border-radius: 16px;
+}
+body .inputCreateTaskContainer input {
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+body .inputCreateTaskContainer button {
+  background: none;
+  border: none;
+}
+body .sectionTask {
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 4;
+  background-color: #1F2128;
+  transform: translateX(100%);
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .sectionTask .headerSectionTask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  height: 10%;
+}
+body .sectionTask .headerSectionTask h1 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+}
+body .sectionTask .mainSectionTask {
+  height: 90%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  overflow-y: scroll;
+  align-items: center;
+}
+body .sectionTask .mainSectionTask .tasksContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+body .sectionTask .mainSectionTask .inputCreateTask {
+  width: 85%;
+  transform: translateY(0%);
+  border-radius: 0px 0px 16px 16px;
+  z-index: 1;
+  height: 0vh;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #343740;
+  transition: all 0.5s;
+}
+body .sectionTask .mainSectionTask .inputCreateTask .formCreateTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+body .sectionTask .mainSectionTask .inputCreateTask .formCreateTask .inputTextCreateTask {
+  width: 76%;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding-left: 2rem;
+}
+body .sectionTask .mainSectionTask .inputCreateTask .formCreateTask .inputTextCreateTask:focus {
+  background: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+body .sectionTask .mainSectionTask .inputCreateTask .formCreateTask .buttonSubmitCreateTask {
+  width: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: none;
+  border: none;
+}
+body .sectionTask .mainSectionTask .createTask {
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  height: 8.5vh;
+  background-color: #48AF65;
+}
+body .sectionTask .mainSectionTask .createTask .taskText {
+  width: 76%;
+  padding-left: 2rem;
+}
+body .sectionTask .mainSectionTask .createTask .boxIcon {
+  width: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .sectionTask .mainSectionTask .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #252831;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  height: 8.5vh;
+  width: 85%;
+}
+body .sectionTask .mainSectionTask .task .taskText {
+  width: 100%;
+}
+body .sectionTask .mainSectionTask .task .taskText p {
+  padding-left: 2rem;
+}
+body .sectionTask .mainSectionTask .task .checked {
+  background-color: #48AF65;
+  border-radius: 0px 16px 16px 0px;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.1s;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header img {
+  width: 25vw;
+}
+body main {
+  height: 90%;
+  overflow-y: scroll;
+}
+body main .boxContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.5s;
+}
+body main .boxContainer .createANewBoxSistem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .boxContainer .inputCreateBox {
+  width: 85%;
+  transform: translateY(0%);
+  border-radius: 0px 0px 16px 16px;
+  z-index: 1;
+  height: 0vh;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #343740;
+  transition: all 0.5s;
+}
+body main .boxContainer .inputCreateBox .formCreateBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+body main .boxContainer .inputCreateBox .formCreateBox .inputTextCreateBox {
+  width: 76%;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding-left: 2rem;
+}
+body main .boxContainer .inputCreateBox .formCreateBox .inputTextCreateBox:focus {
+  background: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+body main .boxContainer .inputCreateBox .formCreateBox .buttonSubmitCreateBox {
+  width: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: none;
+  border: none;
+}
+body main .boxContainer .createBox {
+  background-color: #48AF65;
+  width: 85%;
+  transition: all 0.5s;
+  height: 8.5vh;
+  display: flex;
+  position: relative;
+  border-radius: 16px;
+  z-index: 2;
+}
+body main .boxContainer .createBox .boxText {
+  color: #fff;
+  width: 76%;
+  display: flex;
+  align-items: center;
+}
+body main .boxContainer .createBox .boxText p {
+  padding-left: 2rem;
+}
+body main .boxContainer .createBox .boxIcon {
+  display: flex;
+  justify-content: center;
+  width: 24%;
+  align-items: center;
+}
+body main .boxContainer .box {
+  font-size: 15px;
+  height: 8.5vh;
+  width: 85%;
+  border-radius: 16px;
+  text-align: start;
+  color: #fff;
+  background-color: #252831;
+  display: flex;
+  justify-content: start;
+}
+body main .boxContainer .box .boxText {
+  width: 76%;
+  display: flex;
+  align-items: center;
+  border-radius: 16px 0px 0px 16px;
+}
+body main .boxContainer .box .boxText p {
+  padding-left: 2rem;
+}
+body main .boxContainer .box .boxIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+}
+body main .boxContainer .box .checked {
+  overflow: hidden;
+  background-color: #48AF65;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+  border-radius: 0px 16px 16px 0px;
+}/*# sourceMappingURL=style.css.map */
